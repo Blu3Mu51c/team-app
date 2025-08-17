@@ -10,6 +10,7 @@ export async function searchMovies(term, page=1){
     return { items: data.Search, total: Number(data.totalResults||0) };
   }
   return { items:[], total:0, error: data.Error || "No results" };
+
 }
 
 export async function getMovieById(id){
