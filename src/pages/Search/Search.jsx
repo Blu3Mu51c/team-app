@@ -45,6 +45,7 @@ useEffect(() => {
         })
       );
 
+      
       setItems(detailed);
       setTotal(t);
       setLoading(false);
