@@ -1,12 +1,38 @@
-# React + Vite
+### Team
+1. PM/GitHub Manager: Abdulla Alsheikh
+2. Layout Lead: Mohammed Ali Ahmed
+3. UI Lead: Sakeena Sayed Kadhem
+4. Page Dev A: Fatima Alzaki 
+5. Page Dev B: Hamza Mohammed
+6. QA/API/Docs: Zahraa Busuhail
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Links
+1. Repo: [Team App](https://github.com/alshaikh-exe/team-app)
+2. Live Surge Demo (optional): <URL>
+3. Trello: [Trello](https://trello.com/invite/b/68a174deaf01092a2ddc9e07/ATTIa7119e4c45cc110cf2c843edb3152f724871A71B/group-2-hackathon)
+4. Wireframe: <URL or /docs/wireframe.png>
 
-Currently, two official plugins are available:
+### API Choice
+OMDb… why we chose it:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+We chose OMDB because we felt that there was a broader chance for creativity to show and improve on the website. We could add really cool features and prepare the website in a neat and compact way.
 
-## Expanding the ESLint configuration
+### How to Run
+1) .env with VITE_* key
+2) npm i
+3) npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### What Works
+- <bullet>
+- <bullet>
+
+### Known Issues
+- <bullet>
+
+### Screenshots
+- Home
+- Search
+- Details
+
+### Contributors Proof
+We used branches and PRs. Instructors can verify via GitHub History and Blame.
