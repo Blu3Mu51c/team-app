@@ -20,7 +20,6 @@ export default function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/movie/:id" element={<Movie />} />
         <Route path="*" element={<NotFound />} />
-        
       </Routes>
        <Footer />
     </div>
