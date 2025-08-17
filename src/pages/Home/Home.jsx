@@ -45,22 +45,6 @@ export default function Home() {
           <button type="submit">Search</button>
         </form>
       </section>
-
-      {/* Quick category links → /search?genre=... (your Search page can read either q or genre) */}
-      <section>
-        <h2>Explore by Category</h2>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 12 }}>
-          {CATEGORIES.map(c => (
-            <Link
-              key={c}
-              to={`/search?genre=${encodeURIComponent(c.toLowerCase())}`}
-              style={{ padding: "8px 12px", border: "1px solid #1f2937", borderRadius: 999, textDecoration: "none" }}
-            >
-              {c}
-            </Link>
-          ))}
-        </div>
-      </section>
     </main>
   );
 }
