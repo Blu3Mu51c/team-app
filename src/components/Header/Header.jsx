@@ -1,10 +1,59 @@
+import { useEffect, useState } from "react";
 
-import { Link } from "react-router-dom";
-export default function Header(){
+const OMDB_KEY = import.meta.env.VITE_OMDB_KEY;
+
+export default function Header() {
+  const [posters, setPosters] = useState([]);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    async function fetchPosters() {
+      let results = [];
+
+      
+      for (let page = 1; page <= 3; page++) {
+        const res = await fetch(
+          `https://www.omdbapi.com/?apikey=${OMDB_KEY}&s=star&page=${page}`
+        );
+        const data = await res.json();
+
+        if (data.Response === "True") {
+          const pagePosters = data.Search
+            .filter(movie => movie.Poster !== "N/A")
+            .map(movie => movie.Poster);
+
+          results = results.concat(pagePosters);
+        }
+      }
+
+      setPosters(results);
+    }
+
+    fetchPosters();
+  }, []);
+
+  useEffect(() => {
+    if (posters.length === 0) return;
+
+    const timer = setInterval(() => {
+      setIndex(i => (i + 1) % posters.length);
+    }, 9000); 
+
+    return () => clearInterval(timer);
+  }, [posters]);
+
   return (
-    <nav className="header">
-      <Link to="/"><div>HOME</div></Link>
-      <Link to="/about"><div>ABOUT</div></Link>
-    </nav>
+    <header >
+    
+      {posters.length > 0 ? (
+        <img
+          src={posters[index]}
+          alt="Movie Poster"
+          
+        />
+      ) : (
+        <p>Loading...</p>
+      )}
+    </header>
   );
 }
