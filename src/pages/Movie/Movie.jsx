@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Header from "../../components/Header/Header";
-import Nav from "../../components/Nav/Nav";
-import Footer from "../../components/Footer/Footer";
+// import Header from "../../components/Header/Header";
+// import Nav from "../../components/Nav/Nav";
+// import Footer from "../../components/Footer/Footer";
 
-// src/pages/Movie/Movie.jsx
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+// // src/pages/Movie/Movie.jsx
+// import { useEffect, useState } from "react";
+// import { useParams, Link } from "react-router-dom";
 
 export default function Movie() {
   const { id } = useParams();            // imdbID from /details/:id

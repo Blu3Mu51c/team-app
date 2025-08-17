@@ -1,10 +1,10 @@
 import { useNavigate, Link } from "react-router-dom";
-import Header from "../../components/Header/Header";
-import Nav from "../../components/Nav/Nav";
-import Footer from "../../components/Footer/Footer";
+// import Header from "../../components/Header/Header";
+// import Nav from "../../components/Nav/Nav";
+// import Footer from "../../components/Footer/Footer";
 
 // src/pages/Home/Home.jsx
-import { useNavigate, Link } from "react-router-dom";
+// import { useNavigate, Link } from "react-router-dom";
 
 const CATEGORIES = ["Action", "Comedy", "Drama", "Sci-Fi", "Romance", "Animation"];
 
