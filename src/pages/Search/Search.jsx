@@ -85,7 +85,7 @@ const filteredItems = items.filter(m => {
 
     return (
         <section className="container">
-            <h1>Search</h1>
+            <h1 class="search">Search</h1>
 
             <form
                 onSubmit={(e) => {
