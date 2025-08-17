@@ -33,7 +33,7 @@ useEffect(() => {
 
     const { items: arr, total: t, error: e } = searchTerm
       ? await searchMovies(searchTerm, page)
-      : await searchMovies("a", page); // fallback to some query so we get results
+      : await searchMovies("spider", page); // fallback to some query so we get results
 
     if (!ignore) {
       if (e) { setError(e); setLoading(false); return; }
@@ -58,7 +58,7 @@ useEffect(() => {
 
 
 
-    const pages = Math.max(1, Math.ceil(total / 10));
+const pages = Math.max(1, Math.ceil(total / 10));
 const filteredItems = items.filter(m => {
   
     // Genre filter
