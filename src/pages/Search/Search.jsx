@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { searchMovies, getMovieDetails } from "../../lib/omdb.js";
+import { FaSearch } from "react-icons/fa"
+import './Search.css'
 
 export default function Search() {
     const [term, setTerm] = useState("");
@@ -86,9 +88,9 @@ const filteredItems = items.filter(m => {
 
     return (
         <section className="container">
-            <h1>Search</h1>
+            <h1 class="search">Search</h1>
 
-            <form
+            {/* <form
                 onSubmit={(e) => {
                     e.preventDefault();
                     setPage(1);
@@ -98,6 +100,24 @@ const filteredItems = items.filter(m => {
             >
                 <input name="q" placeholder="Search movies…" />
                 <button>Go</button>
+            </form> */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setPage(1);
+                setTerm(e.currentTarget.q.value.trim());
+              }}
+              className="search-form"  
+            >
+              <div className="search-input-wrapper">
+                <FaSearch className="search-icon" />
+                <input 
+                  name="q" 
+                  placeholder="Search movies…" 
+                  className="search-input"  
+                />
+              </div>
+              <button type="submit" className="search-button">Search</button>  
             </form>
 
             {/* Filters */}
