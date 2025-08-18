@@ -86,7 +86,7 @@ export default function Header() {
         const data = await res.json();
 
         if (data.Response === "True") {
-          const pagePosters = data.Search.filter(movie => movie.Poster !== "N/A");
+          const pagePosters = data.Search.filter(movie => movie.Poster !== "N/A").map(movie => movie.Poster);
           results = results.concat(pagePosters);
         }
       }
