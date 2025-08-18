@@ -70,13 +70,13 @@ const OMDB_KEY = import.meta.env.VITE_OMDB_KEY;
 // }
 
 export default function Header() {
-  const [movies, setMovies] = useState([]); // <-- نحفظ الأفلام كاملة
+  const [posters, setPosters] = useState([]); 
   const [index, setIndex] = useState(0);
   const location = useLocation();
 
   // --- تحميل الأفلام من API
   useEffect(() => {
-    async function fetchMovies() {
+    async function fetchPosters() {
       let results = [];
 
       for (let page = 1; page <= 3; page++) {
@@ -86,31 +86,31 @@ export default function Header() {
         const data = await res.json();
 
         if (data.Response === "True") {
-          const pageMovies = data.Search.filter(movie => movie.Poster !== "N/A");
-          results = results.concat(pageMovies);
+          const pagePosters = data.Search.filter(movie => movie.Poster !== "N/A");
+          results = results.concat(pagePosters);
         }
       }
 
-      setMovies(results);
+      setPosters(results);
     }
 
-    fetchMovies();
+    fetchPosters();
   }, []);
 
-  // --- مؤقت لتغيير الصور
+ 
   useEffect(() => {
-    if (movies.length === 0) return;
+    if (posters.length === 0) return;
 
     const timer = setInterval(() => {
-      setIndex(i => (i + 1) % movies.length);
+      setIndex(i => (i + 1) % posters.length);
     }, 9000);
 
     return () => clearInterval(timer);
-  }, [movies]);
+  }, [posters]);
 
   // --- JSX
   if (location.pathname === "/") {
-    const currentMovie = movies[index];
+    const currentMovie = posters[index];
 
     return (
       <header
