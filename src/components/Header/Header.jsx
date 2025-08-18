@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const OMDB_KEY = import.meta.env.VITE_OMDB_KEY;
 
 export default function Header() {
   const [posters, setPosters] = useState([]);
   const [index, setIndex] = useState(0);
-  const location = useLocation();
+  const location = Link();
 
   useEffect(() => {
     async function fetchPosters() {
