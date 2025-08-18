@@ -8,10 +8,10 @@ export default function Footer() {
         <p3>Contact info: </p3><br/>
         <p3>Team:</p3>
         <ol>
-          <li>Abdullah</li>
+          <li>Abdulla</li>
           <li>Sakeena</li>
           <li>Fatima</li>
-          <li>Zahra</li>
+          <li>Zahraa</li>
           <li>Mohammed</li>
           <li>Hamza</li>
         </ol>

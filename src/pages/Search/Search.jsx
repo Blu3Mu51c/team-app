@@ -188,13 +188,13 @@ const filteredItems = items.filter(m => {
             <div className="grid">
                 {filteredItems.map(m => (
                     <article key={m.imdbID} className="card-sm">
-                        <Link to={`/details/${m.imdbID}`}><img src={m.Poster !== "N/A" ? m.Poster : "/placeholder.png"} alt={m.Title} /></Link>
+                        <Link to={`/movie/${m.imdbID}`}><img src={m.Poster !== "N/A" ? m.Poster : "/placeholder.png"} alt={m.Title} /></Link>
                         <div style={{ padding: ".5rem .75rem" }}>
                             <strong>{m.Title}</strong>
                             <p>{m.Year}</p>
                             <p>{m.Genre}</p>
                             <p>⭐ {m.imdbRating}</p>
-                            <Link to={`/details/${m.imdbID}`}><button>Details</button></Link>
+                            <Link to={`/movie/${m.imdbID}`}><button>Details</button></Link>
                         </div>
                     </article>
                 ))}
