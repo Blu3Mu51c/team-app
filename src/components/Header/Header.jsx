@@ -110,6 +110,7 @@ export default function Header() {
 
   // --- JSX
   if (location.pathname === "/") {
+
     const currentMovie = posters[index];
 
     return (
@@ -142,3 +143,20 @@ export default function Header() {
     );
   }
 }
+
+//   return (
+//     <header >
+    
+//       {posters.length > 0 ? (
+//         <img
+//           src={posters[index]}
+//           alt="Movie Poster"
+          
+//         />
+//       ) : (
+//         <p>Loading...</p>
+//       )}
+//     </header>
+//   );
+// }
+// }
