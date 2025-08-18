@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom"
 
 const OMDB_KEY = import.meta.env.VITE_OMDB_KEY;
 
 export default function Header() {
   const [posters, setPosters] = useState([]);
   const [index, setIndex] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     async function fetchPosters() {
@@ -42,6 +44,7 @@ export default function Header() {
     return () => clearInterval(timer);
   }, [posters]);
 
+  if (location.pathname === "/") {
   return (
     <header >
     
@@ -56,4 +59,5 @@ export default function Header() {
       )}
     </header>
   );
+}
 }
