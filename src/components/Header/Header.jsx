@@ -74,7 +74,6 @@ export default function Header() {
   const [index, setIndex] = useState(0);
   const location = useLocation();
 
-  // --- تحميل الأفلام من API
   useEffect(() => {
     async function fetchPosters() {
       let results = [];
@@ -86,8 +85,8 @@ export default function Header() {
         const data = await res.json();
 
         if (data.Response === "True") {
-          const pagePosters = data.Search.filter(movie => movie.Poster !== "N/A").map(movie => movie.Poster);
-          results = results.concat(pagePosters);
+          const pageMovies = data.Search.filter(movie => movie.Poster !== "N/A").map(movie => movie.Poster);
+          results = results.concat(pageMovies);
         }
       }
 
@@ -108,7 +107,6 @@ export default function Header() {
     return () => clearInterval(timer);
   }, [posters]);
 
-  // --- JSX
   if (location.pathname === "/") {
 
     const currentMovie = posters[index];
@@ -117,7 +115,7 @@ export default function Header() {
       <header
         className="header"
         style={{
-          backgroundImage: currentMovie ? `url(${currentMovie.Poster})` : "none",
+          backgroundImage: currentMovie ? `url(${currentMovie})` : "none",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "14cm",
@@ -125,7 +123,6 @@ export default function Header() {
       >
         <Nav />
         
-        {/* اسم الفيلم في الأسفل */}
         {currentMovie && (
           <div className="movie-title">
             <Link to={`/Movie/${currentMovie.imdbID}`}>
@@ -135,7 +132,8 @@ export default function Header() {
         )}
       </header>
     );
-  } else {
+  } 
+  else {
     return (
       <header className="header">
         <Nav />
