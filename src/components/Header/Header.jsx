@@ -60,7 +60,4 @@ export default function Header() {
     </header>
   );
 }
-else {
-  
-}
 }
