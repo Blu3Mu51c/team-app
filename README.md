@@ -32,7 +32,7 @@ This is a React Single Page Application (SPA) that interfaces with the OMDB API 
    git clone [https://github.com/alshaikh-exe/team-app]
    cd team-app
 
-## Links
+### Links
 1. Repo: [Team App](https://github.com/alshaikh-exe/team-app)
 2. Trello: [Trello](https://trello.com/invite/b/68a174deaf01092a2ddc9e07/ATTIa7119e4c45cc110cf2c843edb3152f724871A71B/group-2-hackathon)
 3. Wireframe: [Wireframe](https://www.canva.com/design/DAGwTpwk75U/vcRSiBs2FmtQT0DFxMMCDQ/edit?utm_content=DAGwTpwk75U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)]
