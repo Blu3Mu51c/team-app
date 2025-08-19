@@ -84,22 +84,39 @@ const searchMovies = async (query) => {
 ```
 ## Project Structure
 ```text
-src/
-├── assets/              # Static assets
-├── components/          # Reusable components
-│   ├── Nav/             # Navigation bar
-│   ├── MovieCard/       # Movie card component
-│   └── Pagination/      # Pagination controls
-├── pages/               # Application pages
-│   ├── Home/            # Landing page
-│   ├── Search/          # Search results
-│   ├── Details/         # Movie details
-│   ├── About/           # Project info
-│   └── NotFound/        # 404 page
-├── lib/                 # API utilities
-│   └── omdb.js          # OMDB API wrapper
-├── App.jsx              # Main app component
-└── main.jsx             # Entry point
+project-root/
+├── node_modules/
+├── public/
+│ ├── about.png
+│ ├── details.png
+│ ├── home.png
+│ ├── search.png
+│ └── vite.svg
+├── src/
+│ ├── assets/
+│ │ └── logo.png
+│ ├── components/
+│ │ ├── Footer/
+│ │ ├── Header/
+│ │ │ ├── Header.css
+│ │ │ └── Header.jsx
+│ │ └── Nav/
+│ │ ├── Nav.css
+│ │ └── Nav.jsx
+│ ├── lib/
+│ ├── pages/
+│ ├── App.css
+│ ├── App.jsx
+│ ├── index.css
+│ └── main.jsx
+├── .env
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
 ```
 ## Pages Overview
 
