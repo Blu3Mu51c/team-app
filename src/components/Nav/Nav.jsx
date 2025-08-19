@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css"
-import logo from "./assets/logo.png"
+import logo from "../../assets/logo.png"
 
 
 const linkClass = ({ isActive }) =>
