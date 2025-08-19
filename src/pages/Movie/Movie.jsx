@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import './Movie.css'
 // import Header from "../../components/Header/Header";
 // import Nav from "../../components/Nav/Nav";
 // import Footer from "../../components/Footer/Footer";
@@ -48,9 +49,6 @@ export default function Movie() {
 
   return (
     <main className="container" style={{ padding: "1.5rem 1rem" }}>
-      <div style={{ marginBottom: 12 }}>
-        <Link to="/search" style={{ textDecoration: "none" }}>← Back to Search</Link>
-      </div>
 
       <article
         style={{
@@ -88,6 +86,11 @@ export default function Movie() {
           </div>
         </div>
       </article>
+      <div style={{ marginBottom: 12 }}>
+        <Link to="/search" className="back-link">
+          ← Back to Search
+        </Link>
+      </div>
     </main>
   );
 }

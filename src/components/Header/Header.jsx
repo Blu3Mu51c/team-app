@@ -74,6 +74,7 @@ export default function Header() {
   const [index, setIndex] = useState(0);
   const location = useLocation();
 
+ 
   useEffect(() => {
     async function fetchPosters() {
       let results = [];
@@ -85,8 +86,8 @@ export default function Header() {
         const data = await res.json();
 
         if (data.Response === "True") {
-          const pageMovies = data.Search.filter(movie => movie.Poster !== "N/A").map(movie => movie.Poster);
-          results = results.concat(pageMovies);
+          const pagePosters = data.Search.filter(movie => movie.Poster !== "N/A").map(movie => movie.Poster);
+          results = results.concat(pagePosters);
         }
       }
 
@@ -107,15 +108,15 @@ export default function Header() {
     return () => clearInterval(timer);
   }, [posters]);
 
+  // --- JSX
   if (location.pathname === "/") {
-
     const currentMovie = posters[index];
 
     return (
       <header
         className="header"
         style={{
-          backgroundImage: currentMovie ? `url(${currentMovie})` : "none",
+          backgroundImage: currentMovie ? `url(${currentMovie.Poster})` : "none",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "14cm",
@@ -123,6 +124,7 @@ export default function Header() {
       >
         <Nav />
         
+        {/* اسم الفيلم في الأسفل */}
         {currentMovie && (
           <div className="movie-title">
             <Link to={`/Movie/${currentMovie.imdbID}`}>
@@ -132,8 +134,7 @@ export default function Header() {
         )}
       </header>
     );
-  } 
-  else {
+  } else {
     return (
       <header className="header">
         <Nav />
@@ -141,20 +142,3 @@ export default function Header() {
     );
   }
 }
-
-//   return (
-//     <header >
-    
-//       {posters.length > 0 ? (
-//         <img
-//           src={posters[index]}
-//           alt="Movie Poster"
-          
-//         />
-//       ) : (
-//         <p>Loading...</p>
-//       )}
-//     </header>
-//   );
-// }
-// }
