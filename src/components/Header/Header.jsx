@@ -124,7 +124,6 @@ export default function Header() {
       >
         <Nav />
         
-        {/* اسم الفيلم في الأسفل */}
         {currentMovie && (
           <div className="movie-title">
             <Link to={`/movie/${currentMovie.imdbID}`}>
