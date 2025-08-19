@@ -1,0 +1,9 @@
+.footer {
+    background-color: #ffcc00;
+    color: #555353;
+}
+.footer__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

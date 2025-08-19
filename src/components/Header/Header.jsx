@@ -116,7 +116,7 @@ export default function Header() {
       <header
         className="header"
         style={{
-          backgroundImage: currentMovie ? `url(${currentMovie.Poster})` : "none",
+          backgroundImage: currentMovie ? `url(${currentMovie})` : "none",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "14cm",
@@ -124,7 +124,6 @@ export default function Header() {
       >
         <Nav />
         
-        {/* اسم الفيلم في الأسفل */}
         {currentMovie && (
           <div className="movie-title">
             <Link to={`/Movie/${currentMovie.imdbID}`}>
