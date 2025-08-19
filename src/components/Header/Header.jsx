@@ -126,7 +126,7 @@ export default function Header() {
         
         {currentMovie && (
           <div className="movie-title">
-            <Link to={`/Movie/${currentMovie.imdbID}`}>
+            <Link to={`/movie/${currentMovie.imdbID}`}>
               {currentMovie.Title}
             </Link>
           </div>
