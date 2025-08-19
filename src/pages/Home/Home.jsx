@@ -1,12 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
-// import Header from "../../components/Header/Header";
-// import Nav from "../../components/Nav/Nav";
-// import Footer from "../../components/Footer/Footer";
-
-// src/pages/Home/Home.jsx
-// import { useNavigate, Link } from "react-router-dom";
-
-const CATEGORIES = ["Action", "Comedy", "Drama", "Sci-Fi", "Romance", "Animation"];
+import { FaSearch } from "react-icons/fa"
+import './Home.css'
 
 export default function Home() {
   const navigate = useNavigate();
@@ -27,22 +21,25 @@ export default function Home() {
           textAlign: "center",
           padding: "2rem 1rem",
           borderRadius: 12,
-          border: "1px solid #1f2937",
-          background: "linear-gradient(180deg, rgba(2,6,23,.6), rgba(2,6,23,.3))",
           marginBottom: "1.5rem",
         }}
       >
-        <img src="/vite.svg" alt="App Logo" width="96" height="96" style={{ marginBottom: 12 }} />
-        <h1 style={{ margin: 0 }}>Mini Movie Explorer</h1>
-        <p className="muted" style={{ marginTop: 8 }}>
-          Search, browse, and save movies to your watchlist.
-        </p>
 
-        {/* Search bar → /search?q=... */}
-        <form onSubmit={onSearch} className="search" style={{ marginTop: 16, width: "100%", maxWidth: 560, display: "flex", gap: 8 }}>
+        {/* <form onSubmit={onSearch} className="search" style={{ marginTop: 16, width: "100%", maxWidth: 560, display: "flex", gap: 8 }}>
           <label htmlFor="q" className="sr-only">Search</label>
           <input id="q" name="q" placeholder="Search movies…" style={{ flex: 1 }} />
           <button type="submit">Search</button>
+        </form> */}
+
+        <form 
+          onSubmit={onSearch} 
+          className="search-form"
+        >
+          <div className="search-input-wrapper">
+            <FaSearch className="search-icon" />
+            <input id="q" name="q" placeholder="Search movies…" />
+          </div>
+          <button type="submit" className="search-button">Search</button>
         </form>
       </section>
     </main>

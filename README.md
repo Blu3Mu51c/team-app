@@ -1,5 +1,5 @@
 ### Team
-1. PM/GitHub Manager: Abdulla Alsheikh
+1. PM/GitHub Manager: Abdulla Alshaikh
 2. Layout Lead: Mohammed Ali Ahmed
 3. UI Lead: Sakeena Sayed Kadhem
 4. Page Dev A: Fatima Alzaki 
